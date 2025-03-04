@@ -32,7 +32,7 @@ body{
     width: 100vw;
     font-family: 'Future Pt Book', Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.5;
-    background-color: #F3F3F3;
+    background-color: #fff;
     overflow-x: hidden;
 }
 
@@ -58,4 +58,39 @@ header{
 
 .top-navbar, .middle-navbar, .bottom-navbar{
     display: flex;
+}
+
+.top-navbar{
+    margin: 1rem;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    /* font-family: 'Future Pt Medium', sans-serif; */
+
+    img{
+        width: 4.5rem;
+        height: 2rem;
+    }
+
+    ul{
+        display: flex;
+        gap: 1rem;
+
+        .more{
+            color: var(--orange);
+
+            &::after{
+                content: '';
+                width: 10px;
+                height: 10px;
+                background-color: var(--orange);
+            }
+        }
+
+        .try-live{
+            color: var(--blue);
+            flex-grow: 1;
+        }
+    }
 }
