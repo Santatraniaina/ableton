@@ -30,7 +30,7 @@ body{
     margin: 0;
     position: relative;
     width: 100vw;
-    font-family: 'Future Pt Book', Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Future Pt Book', sans-serif;
     line-height: 1.5;
     background-color: #fff;
     overflow-x: hidden;
@@ -51,46 +51,102 @@ a{
     }
 }
 
+a.active{
+    color: var(--orange);
+}
+
 header{
     display: flex;
     flex-direction: column;
+    font-size: 1.25rem;
 }
 
-.top-navbar, .middle-navbar, .bottom-navbar{
+.top-navbar, .bottom-navbar{
     display: flex;
 }
 
 .top-navbar{
-    margin: 1rem;
+    padding: 1.25rem;
     align-items: center;
-    gap: 1rem;
-    font-size: 1rem;
     font-weight: bold;
-    /* font-family: 'Future Pt Medium', sans-serif; */
 
     img{
-        width: 4.5rem;
-        height: 2rem;
+        flex-grow: auto;
+        width: 3.75rem;
+        height: 1.75rem;
+        padding: 0 1.5rem;
     }
 
     ul{
+        flex-grow: 1;
         display: flex;
         gap: 1rem;
 
+        li{
+            flex-grow: 1;
+            text-align: center;
+        }
+        li:has(a.try-live){
+            text-align: right;
+            flex-grow: 10;
+        }
+
         .more{
             color: var(--orange);
-
-            &::after{
-                content: '';
-                width: 10px;
-                height: 10px;
-                background-color: var(--orange);
-            }
+            cursor: pointer;
         }
 
         .try-live{
             color: var(--blue);
-            flex-grow: 1;
         }
     }
+
+    input#more{
+        appearance: none;
+        margin: 5px 3px;
+        content: '';
+        height: 2px;
+        width: 12px;
+        background-color: var(--orange);
+        cursor: inherit;
+    }
+}
+
+.middle-navbar{
+    display: none;
+    flex-direction: column;
+    gap: 2.25rem;
+    padding: 1.5rem 2.5rem 3.5rem 2.5rem;
+
+    h3, h4, p{
+        margin: 0;
+    }
+
+    h3{
+        padding-bottom: .5rem;
+        font-size: 1.875rem;
+    }
+
+    .more-list{
+        display: flex;
+        gap: 2.5rem;
+    }
+
+    .from-ableton > .more-list > li{
+        flex-grow: 1;
+    }
+
+}
+
+.header:has(.top-navbar input[type="checkbox"]:checked) .middle-navbar{
+    display: flex;
+}
+
+
+.bottom-navbar{
+    border-top: 2px solid #eee;
+    padding: 1.25rem 2.5rem;
+    gap: 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
 }
