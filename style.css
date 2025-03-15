@@ -10,7 +10,7 @@
 /* Future Pt Book */
 @font-face {
     font-family: 'Future Pt Book';
-    src: url('./assets/font/futura-pt-book.woff2') format('woff2');
+    src: url('./assets/font/FuturaCyrillicBook.ttf') format('ttf');
     font-style: normal;
 }
 /*  Future Pt Book Oblique */
@@ -22,7 +22,7 @@
 /*  Future Pt Medium */
 @font-face {
     font-family: 'Future Pt Medium';
-    src: url('./assets/font/futura-pt-medium.woff2') format('woff2');
+    src: url('./assets/font/FuturaCyrillicMedium.ttf') format('ttf');
     font-style: normal;
 }
 
@@ -30,7 +30,7 @@ body{
     margin: 0;
     position: relative;
     width: 100vw;
-    font-family: 'Future Pt Book', sans-serif;
+    font-family: 'Future Pt Medium', sans-serif;
     line-height: 1.5;
     background-color: #fff;
     overflow-x: hidden;
@@ -54,6 +54,10 @@ a{
 a.active{
     color: var(--orange);
 }
+
+/*===================================================================================*/
+/*====================================> HEADER <=====================================*/
+/*===================================================================================*/
 
 header{
     display: flex;
@@ -150,3 +154,7 @@ header{
     font-size: 1rem;
     font-weight: bold;
 }
+
+/*===================================================================================*/
+/*====================================> FOOTER <=====================================*/
+/*===================================================================================*/
