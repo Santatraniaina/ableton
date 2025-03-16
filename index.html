@@ -132,75 +132,108 @@
     <footer class="footer">
         <img src="./assets/images/svg/ableton-wordmark.svg" alt="Ableton"/>
         <ul class="footer-middle">
-            <li class="about-contact">
+            <li class="item about-contact">
                 <ul class="footer-list">
                     <li class="footer-item">
-                        <a href="#">
+                        <a href="#" class="arrow">
                             Register Live, Push or Move
                         </a>
                     </li>
                     <li class="footer-item">
-                        <a href="#">
+                        <a href="#"  class="arrow">
                             About Ableton
+                        </a>
                     </li>
                     <li class="footer-item">
-                        <a href="#">
+                        <a href="#" class="arrow">
                             Jobs
+                        </a>    
+                    </li>
+                </ul>
+                <ul class="social-media">
+                    <li>
+                        <a href="#" class="social-button">
+                            <img src="./assets/images/svg/facebook.svg" alt="Facebook"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-button">
+                            <img src="./assets/images/svg/twitter.svg" alt="Twitter"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-button">
+                            <img src="./assets/images/svg/youtube.svg" alt="Youtube"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-button">
+                            <img src="./assets/images/svg/instagram.svg" alt="Instagram"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-button">
+                            <img src="./assets/images/svg/tiktok.svg" alt="Tiktok"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-button">
+                            <img src="./assets/images/svg/discord.svg" alt="Discord"/>
                         </a>
                     </li>
                 </ul>
             </li>
-            <li class="education">
+            <li class="item education">
                 <h4>Education</h4>
                 <ul class="footer-list">
                     <li class="footer-item">
-                        <a href="#">
+                        <a href="#" class="arrow">
                             Offers for students and teachers
                         </a>
                     </li>
                     <li class="footer-item">
-                        <a href="#">
+                        <a href="#" class="arrow">
                             Ableton for the Classroom
                         </a>
                     </li>
                     <li class="footer-item">
-                        <a href="#">
+                        <a href="#" class="arrow">
                             Ableton for Colleges and Universities
                         </a>
                     </li>
                 </ul>
             </li>
-            <li class="newsletter">
+            <li class="item newsletter">
                 <h4>Sign up to our newsletter</h4>
                 <p>
                     Enter your email address to stay up to date with the latest offers, tutorials, downloads, surveys and more.
                 </p>
                 <form action="" method="post" class="email-form">
-                    <input type="email" name="email" id="email"/>
+                    <input type="email" name="email" id="email" placeholder="Email Address"/>
                     <button type="submit">Sign up</button>
                 </form>
             </li>
-            <li class="community">
+            <li class="item community">
                 <h4>Community</h4>
                 <ul class="footer-list">
                     <li class="footer-item">
-                        <a href="#">
+                        <a href="#" class="arrow">
                             Find Ableton User Groups
                         </a>
                     </li>
                     <li class="footer-item">
-                        <a href="#">
+                        <a href="#" class="arrow">
                             Find Certified Training
                         </a>
                     </li>
                     <li class="footer-item">
-                        <a href="#">
+                        <a href="#" class="arrow">
                             Become a Certified Trainer
                         </a>
                     </li>
                 </ul>
             </li>
-            <li class="language-location">
+            <li class="item language-location">
                 <h4>Language and Location</h4>
                 <form action="" method="post" class="language-location-form">
                     <select class="js-language" name="language" id="language">
@@ -211,6 +244,7 @@
                         <option value="zh-cn">简体中文</option>
                         <option value="es">Español</option>
                     </select>
+                    <!-- TODO : Fetch Country using JS -->
                     <select class="js-country" name="country" id="country">
                         <option value="us" selected="">United States</option>
                         <option value="de">Deutschland</option>
