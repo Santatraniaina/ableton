@@ -100,7 +100,6 @@ header{
     font-weight: bold;
 
     img{
-        flex-grow: auto;
         width: 3.75rem;
         height: 1.75rem;
         padding: 0 1.5rem;
@@ -179,8 +178,30 @@ header{
 /*===================================================================================*/
 /*====================================> MAIN <=====================================*/
 /*===================================================================================*/
-.container{
 
+.container > section {
+    margin-bottom: 10rem;
+
+    .image-container{
+        max-width: 80%;
+        margin: 0 auto 10rem;
+    }
+
+    .description-container{
+        margin: 0 auto;
+        max-width: 60%;
+    }
+}
+
+.hero > .image-container{
+    position: relative;
+
+    .hero-logo{
+        width: 430px;
+        height: 104px;
+        accent-color: var(--orange);
+        z-index: 100;
+    }
 }
 
 
