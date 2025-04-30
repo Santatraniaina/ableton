@@ -12,7 +12,7 @@
     font-family: 'Future Pt Book';
     src: url('./assets/font/futura-pt-book.woff2') format('woff2');
     font-style: normal;
-    font-weight: normal;
+    font-weight: 100;
 }
 /*  Future Pt Book Oblique */
 @font-face {
@@ -25,6 +25,7 @@
     font-family: 'Future Pt Medium';
     src: url('./assets/font/FuturaCyrillicMedium.ttf') format('ttf');
     font-style: normal;
+    font-weight: 100;
 }
 
 body{
@@ -54,6 +55,28 @@ a{
 
 a.active{
     color: var(--orange);
+}
+
+/* Utility Classes */
+.color-accent-blue{
+    color: var(--blue);
+
+    &:hover{
+        color: var(--blue);
+    }
+}
+
+.arrow::after{
+    box-sizing: border-box;
+    display: inline-block;
+    width: 0.315em;
+    height: 0.315em;
+    margin-left: 0.1em;
+    content: '';
+    border-style: solid;
+    border-width: 0.09em 0.09em 0 0;
+    transform: rotate(50deg) skew(10deg) translateY(-50%);
+    color: inherit;
 }
 
 
@@ -100,10 +123,6 @@ header{
         .more{
             color: var(--orange);
             cursor: pointer;
-        }
-
-        .try-live{
-            color: var(--blue);
         }
     }
 
@@ -158,6 +177,14 @@ header{
 }
 
 /*===================================================================================*/
+/*====================================> MAIN <=====================================*/
+/*===================================================================================*/
+.container{
+
+}
+
+
+/*===================================================================================*/
 /*====================================> FOOTER <=====================================*/
 /*===================================================================================*/
 .footer {
@@ -176,18 +203,6 @@ header{
     display: flex;
     flex-wrap: wrap;
     gap: 4rem 1rem;
-
-    .arrow::after{
-        box-sizing: border-box;
-        display: inline-block;
-        width: 0.315em;
-        height: 0.315em;
-        margin-left: 0.1em;
-        content: '';
-        border-style: solid;
-        border-width: 0.09em 0.09em 0 0;
-        transform: rotate(50deg) skew(10deg) translateY(-50%);
-    }
 
     .item {
         flex-grow: 1;
