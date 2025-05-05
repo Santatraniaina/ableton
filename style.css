@@ -195,12 +195,43 @@ header{
 
 .hero > .image-container{
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .hero-image {
+        width: auto;
+        height: auto;
+        /*object-fit: cover;*/
+        /*object-position: center;*/
+    }
 
     .hero-logo{
         width: 430px;
         height: 104px;
-        accent-color: var(--orange);
         z-index: 100;
+        position: absolute;
+        fill: var(--orange);
+    }
+}
+
+.content{
+    .image-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &::after{
+            display: block;
+            content: "";
+            background-color: var(--yellow);
+            position: absolute;
+            right: 0;
+            width: 60%;
+            height: 40rem;
+            z-index: -1;
+        }
     }
 }
 
@@ -272,7 +303,7 @@ header{
             padding: .4em .75em;
             user-select: none;
         }
-    
+
         button[type="submit"] {
             background-color: var(--blue);
             color: white;
@@ -285,7 +316,7 @@ header{
             font-family: inherit;
             font-weight: 600;
 
-            padding: .4em .75em;    
+            padding: .4em .75em;
         }
     }
 
