@@ -215,9 +215,22 @@ main {
         margin: 0 auto 10rem;
     }
 
-    .description-container{
+    .description-container, .video-container{
         margin: 0 auto;
         max-width: 50%;
+    }
+
+    .video-container {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10rem;
+
+        .video-title {
+            display: block;
+            font-size: .875rem;
+            font-weight: bold;
+            padding: .625rem;
+        }
     }
 }
 
@@ -229,10 +242,9 @@ main {
     align-items: center;
 
     .hero-image {
-        width: auto;
-        height: auto;
-        /*object-fit: cover;*/
-        /*object-position: center;*/
+        width: 100%;
+        height: 656px;
+        object-fit: cover;
     }
 
     .hero-logo{
