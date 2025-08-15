@@ -128,65 +128,79 @@ header{
     font-size: 1.25rem;
 }
 
-.top-navbar, .bottom-navbar{
+.navbar--top, .navbar--bottom{
     display: flex;
 }
 
-.top-navbar{
-    padding: 1.25rem;
+.navbar__logo--image {
+    display: block;
+    width: 3.75em;
+    height: 1.75em;
+}
+
+.navbar--top{
+    padding: 1.5rem 2.5rem;
     align-items: center;
     font-weight: bold;
+}
 
-    img{
-        width: 3.75rem;
-        height: 1.75rem;
-        padding: 0 1.5rem;
+.top__links {
+    flex-grow: 1;
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin-left: 1.5em;
+
+    > li:not(:last-child) {
+        font-size: 1.175em;
     }
 
-    ul{
-        flex-grow: 1;
-        display: flex;
-        gap: 1rem;
-
-        li{
-            flex-grow: 1;
-            text-align: center;
-        }
-        li:has(a.try-live){
-            text-align: right;
-            flex-grow: 10;
-        }
-
-        .more{
-            color: var(--orange);
-            cursor: pointer;
-        }
-    }
-
-    input#more{
-        appearance: none;
-        margin: 5px 3px;
-        content: '';
-        height: 2px;
-        width: 12px;
-        background-color: var(--orange);
-        cursor: inherit;
+    .more{
+        color: var(--orange);
+        cursor: pointer;
     }
 }
 
-.middle-navbar{
+.top__item {
+    flex-grow: 1;
+    text-align: center;
+
+    &:has(a.try-live){
+        text-align: right;
+        flex-grow: 10;
+    }
+}
+
+/* TODO : Make More's icon like a Plus icon if checked */
+#more{
+    appearance: none;
+    margin: 5px 3px;
+    content: '';
+    height: 3px;
+    width: 12px;
+    background-color: var(--orange);
+    cursor: inherit;
+}
+
+
+
+.navbar--middle {
     display: none;
     flex-direction: column;
-    gap: 2.25rem;
-    padding: 1.5rem 2.5rem 3.5rem 2.5rem;
+    gap: 3.125rem;
+    padding: 2.25rem 2.5rem 3.5rem 2.5rem;
 
-    h3, h4, p{
+    h3, h4, p {
         margin: 0;
     }
 
-    h3{
+    h3 {
         padding-bottom: .5rem;
-        font-size: 1.875rem;
+        font-size: 2.125rem;
+    }
+
+    a {
+        font-size: 1.25em;
     }
 
     .more-list{
@@ -194,18 +208,18 @@ header{
         gap: 2.5rem;
     }
 
-    .from-ableton > .more-list > li{
+    .from-ableton > .more-list > li {
         flex-grow: 1;
     }
 
 }
 
-.header:has(.top-navbar input[type="checkbox"]:checked) .middle-navbar{
+.header:has(.navbar--top input[type="checkbox"]:checked) .navbar--middle{
     display: flex;
 }
 
 
-.bottom-navbar{
+.navbar--bottom{
     border-top: 2px solid #eee;
     padding: 1.25rem 2.5rem;
     gap: 1.5rem;
@@ -268,12 +282,11 @@ main {
         object-fit: cover;
     }
 
-    .hero-logo{
+    .hero__logo{
         width: 430px;
         height: 104px;
         z-index: 100;
         position: absolute;
-        fill: var(--orange);
     }
 }
 
