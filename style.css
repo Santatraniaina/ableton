@@ -132,8 +132,8 @@ main {
 .background{
     display: block;
     position: absolute;
-    width: 58%;
-    height: 80%;
+    width: 60%;
+    height: 85%;
     z-index: -1;
 }
 
@@ -367,17 +367,30 @@ header {
     margin: 0 auto;
     display: flex;
 
-    .cta-image{
-        flex-grow: 1;
-        height: auto;
-    }
+}
 
-    .cta-description {
-        flex-grow: 1;
-        background-color: var(--blue-sky);
-        display: flex;
-        align-items: center;
-        justify-content: center;
+.cta__image{
+    flex-grow: 1;
+    height: auto;
+    align-items: stretch;
+}
+
+.cta__description {
+    flex-grow: 1;
+    background-color: var(--blue-sky);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta__wrapper {
+    width: 60%;
+
+    > a {
+        display: inline-block;
+        margin-top: 1em;
+        font-weight: bold;
+        font-size: 1.75em;
     }
 }
 
