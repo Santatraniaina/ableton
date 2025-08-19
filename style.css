@@ -515,3 +515,76 @@ header {
     align-items: center;
     gap: 1rem;
 }
+
+/* Viewport Breakpoint */
+@media (max-width: 1024px) {
+    /*
+    .navbar--top {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .navbar--middle {
+        padding: 1.25rem 1.25rem;
+    }
+
+    .navbar--bottom {
+        padding: 1.25rem 1.25rem;
+    }
+
+    .footer {
+        padding: 4rem 2.5rem;
+    }
+    */
+
+    .footer--middle {
+        flex-direction: column;
+    }
+
+    .footer__item {
+        width: 100%;
+    }
+
+    .newsletter {
+        max-width: 100%;
+        order: -1;
+    }
+
+    .footer--bottom {
+        gap: 5rem;
+    }
+
+    .footer--bottom, .footer--bottom-left {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/*
+@media (max-width: 768px) {
+    .navbar--top {
+        padding: 1.5rem 1rem;
+    }
+
+    .navbar--middle {
+        padding: 1.25rem 1rem;
+    }
+
+    .navbar--bottom {
+        padding: 1.25rem 1rem;
+    }
+
+    .footer {
+        padding: 3rem 2.5rem;
+    }
+
+    .footer--middle {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__item {
+        min-width: unset;
+        text-align: center;
+    }
+}
+*/
